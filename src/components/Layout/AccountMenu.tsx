@@ -16,7 +16,7 @@ export const AccountMenu = () => (
         <ChevronDownIcon w="1.125em" h="1.125em" />
       </Center>
     </MenuButton>
-    <MenuList bg="bg.700" borderColor="border.500">
+    <MenuList bg="bg.700" shadow="lg" border="none">
       <MenuItem bg="inherit" _hover={{ background: 'blue.500' }}>
         Log out
       </MenuItem>

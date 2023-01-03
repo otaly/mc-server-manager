@@ -1,6 +1,6 @@
 import { queryClient } from '@/lib/react-query';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import React from 'react';
+import React, { Suspense } from 'react';
 import { QueryClientProvider } from 'react-query';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -46,9 +46,11 @@ const theme = extendTheme({
 });
 
 export const AppProvider = ({ children }: AppProviderProps) => (
-  <ChakraProvider theme={theme}>
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>{children}</BrowserRouter>
-    </QueryClientProvider>
-  </ChakraProvider>
+  <Suspense fallback={<p>provider: Loading...</p>}>
+    <ChakraProvider theme={theme}>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>{children}</BrowserRouter>
+      </QueryClientProvider>
+    </ChakraProvider>
+  </Suspense>
 );

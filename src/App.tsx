@@ -1,9 +1,9 @@
-import { MainLayout } from './components/Layout';
 import { AppProvider } from './providers/app';
+import { AppRoutes } from './routes';
 
 const App = () => (
   <AppProvider>
-    <MainLayout>contents</MainLayout>
+    <AppRoutes />
   </AppProvider>
 );
 
