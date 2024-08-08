@@ -43,6 +43,8 @@ jobs:
         with:
           urls: http://localhost:5173/app/servers
           server_command: npm run dev
+          width: 1280
+          height: 832
           delay: 3000
 
       - name: Commit changes
