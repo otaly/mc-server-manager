@@ -78,14 +78,14 @@ proxy.ts                        # Next.js middleware（アクセス制御）
 ```
 app/(main)/servers/page.tsx        [Server Component]
   └─ _components/ServerList.tsx    [Client Component "use client"]
-       ├─ useQuery('servers', fetchServers, { refetchInterval: 5000 })
+       ├─ useQuery('servers', fetchServers, { refetchInterval: starting/stopping中のみ5000 })
        └─ ServerListItem.tsx       [Client Component]
             ├─ ControlButton.tsx   [Client Component]
             └─ StateLabel.tsx      [Client Component]
 ```
 
 - `page.tsx` はシェルのみ。将来、初期データをServer側でfetchしてpropsで渡す構造に移行しやすいよう境界を明確にしておく
-- `ServerList` が TanStack Query でポーリング（5秒間隔想定）
+- `ServerList` は TanStack Query でサーバー一覧を取得。`state` が `starting` または `stopping` のサーバーが存在する間のみポーリング（5秒間隔想定）。全サーバーが `running` / `stopped` になったらポーリングを停止
 - Start/Stop ボタンは将来 Server Actions に接続予定。今回はモックのため未配線
 
 ---
@@ -102,8 +102,7 @@ app/(main)/servers/page.tsx        [Server Component]
 
 - `(main)/layout.tsx` — MainLayout（Header含む）を適用するルート群
 - `(auth)/` — ヘッダーなしのレイアウト
-- アクセス制御は `proxy.ts`（Next.js middleware）で一元管理。Route Group の layout はレイアウト適用のみ担当
-- **注:** Next.js の middleware ファイルは規約上 `middleware.ts` という名前が必要。`proxy.ts` という名前の場合は `middleware.ts` からexportする構成か、別途確認が必要
+- アクセス制御は `proxy.ts`（Next.js 16 の middleware ファイル名）で一元管理。Route Group の layout はレイアウト適用のみ担当
 
 ---
 
