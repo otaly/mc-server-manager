@@ -65,4 +65,5 @@ npm run dev       # 開発サーバー起動
 npm run build     # ビルド
 npm run test      # テスト（watch モード）
 npm run test:run  # テスト（1 回実行）
+npm run typecheck # 型チェック
 ```
