@@ -37,12 +37,14 @@ jobs:
 
       - name: Install
         run: npm ci
+        working-directory: frontend
 
       - name: Update Screenshot
         uses: otaly/readme-screenshot-action@v1.0.0
         with:
           urls: http://localhost:3000/servers
           server_command: npm run dev
+          server_working_dir: frontend
           width: 1280
           height: 832
           delay: 3000
