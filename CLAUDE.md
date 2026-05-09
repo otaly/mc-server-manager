@@ -34,31 +34,33 @@ Minecraft サーバーをタイミングよく起動・停止するための Web
 ## ディレクトリ構造
 
 ```
-src/
-  app/
-    layout.tsx              # Root layout（Providers のみ）
-    page.tsx                # / → /servers リダイレクト
-    (main)/
-      layout.tsx            # MainLayout 適用
-      servers/
-        page.tsx
-        _components/        # サーバー一覧専用コンポーネント
-    (auth)/
-      login/
-        page.tsx
-        _components/
-  components/shared/        # プロジェクト共通コンポーネント
-  theme/                    # Chakra UI v3 テーマ
-  lib/                      # QueryClient 等
-  types/                    # 型定義
-  utils/                    # ユーティリティ関数
-public/                     # 静的ファイル（画像・SVG）
-proxy.ts                    # Next.js middleware（アクセス制御）
+frontend/
+  src/
+    app/
+      layout.tsx              # Root layout（Providers のみ）
+      page.tsx                # / → /servers リダイレクト
+      (main)/
+        layout.tsx            # MainLayout 適用
+        servers/
+          page.tsx
+          _components/        # サーバー一覧専用コンポーネント
+      (auth)/
+        login/
+          page.tsx
+          _components/
+    components/shared/        # プロジェクト共通コンポーネント
+    theme/                    # Chakra UI v3 テーマ
+    lib/                      # QueryClient 等
+    types/                    # 型定義
+    utils/                    # ユーティリティ関数
+  public/                     # 静的ファイル（画像・SVG）
+  proxy.ts                    # Next.js middleware（アクセス制御）
 ```
 
 ## 開発コマンド
 
 ```bash
+cd frontend
 npm run dev       # 開発サーバー起動
 npm run build     # ビルド
 npm run test      # テスト（watch モード）
