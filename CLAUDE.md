@@ -5,7 +5,7 @@ Minecraft サーバーをタイミングよく起動・停止するための Web
 ## 技術スタック
 
 - **フレームワーク:** Next.js 16（App Router）
-- **UI:** Chakra UI v3（テーマは `/theme` に集約）
+- **UI:** Chakra UI v3（テーマは `frontend/src/theme` に集約）
 - **データフェッチ:** デフォルトは Server Components。クライアント状態が必要な場合のみ TanStack Query v5
 - **テスト:** Vitest + React Testing Library
 - **認証:** Better Auth（未実装、スコープ外）
@@ -21,15 +21,15 @@ Minecraft サーバーをタイミングよく起動・停止するための Web
 
 | 場所 | 用途 |
 |---|---|
-| `app/[route]/_components/` | そのルート専用コンポーネント。他ルートから import しない |
-| `components/shared/` | 複数ルートで使うが、プロジェクト文脈（認証・ドメイン知識）を含む共通コンポーネント |
-| `components/ui/` | 他プロジェクトでも流用できる純粋 UI パーツ（ボタン、チェックボックス等）。必要になったら作る |
+| `frontend/src/app/[route]/_components/` | そのルート専用コンポーネント。他ルートから import しない |
+| `frontend/src/components/shared/` | 複数ルートで使うが、プロジェクト文脈（認証・ドメイン知識）を含む共通コンポーネント |
+| `frontend/src/components/ui/` | 他プロジェクトでも流用できる純粋 UI パーツ（ボタン、チェックボックス等）。必要になったら作る |
 
 ## テーマ
 
 - Chakra UI v3 の `createSystem` + `defineConfig` を使う
-- テーマ設定・recipe は `theme/` に置く
-- recipe が増えたら `theme/recipes/` サブディレクトリを作る
+- テーマ設定・recipe は `frontend/src/theme/` に置く
+- recipe が増えたら `frontend/src/theme/recipes/` サブディレクトリを作る
 
 ## ディレクトリ構造
 
