@@ -85,6 +85,10 @@ npm run test:run  # テスト（1 回実行）
 
 パスエイリアス `@/*` は `./src/*` を指しており、`frontend/` 内では変更不要。
 
+### `.gitignore`
+
+現状はルート相対パス（`/node_modules`、`/.next/` 等）で記述されているため、`frontend/` 配下をカバーしない。先頭の `/` を外してどのサブディレクトリでもマッチするよう変更する（`/node_modules` → `node_modules`、`/.next/` → `.next/` 等）。
+
 ## 注意事項
 
 - `node_modules/` と `.next/` は移動せず、`frontend/` で `npm ci` を実行し直す。
