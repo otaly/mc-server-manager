@@ -1,23 +1,18 @@
 'use client';
 
-import { Avatar, Center, Menu } from '@chakra-ui/react';
+import { Avatar, Center, Icon, Menu } from '@chakra-ui/react';
 import { ChevronDown } from 'lucide-react';
 
 export const AccountMenu = () => (
   <Menu.Root>
     <Menu.Trigger asChild>
-      <Center
-        as="button"
-        gap={1}
-        bg="transparent"
-        border="none"
-        cursor="pointer"
-        color="white"
-      >
-        <Avatar.Root size="sm">
+      <Center gap={1} cursor="pointer">
+        <Avatar.Root size="xs">
           <Avatar.Fallback />
         </Avatar.Root>
-        <ChevronDown size={18} />
+        <Icon size="sm">
+          <ChevronDown />
+        </Icon>
       </Center>
     </Menu.Trigger>
     <Menu.Positioner>

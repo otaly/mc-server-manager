@@ -28,7 +28,7 @@ export const ServerListItem = ({
     <Flex align="center" gap={8} flex={1}>
       <ServerIcon isActive={server.state === 'running'} h={8} />
       <Stack gap={1} w="11rem">
-        <Text lineClamp={1}>{server.name}</Text>
+        <Text lineHeight="short" truncate>{server.name}</Text>
         <StateLabel
           serverState={server.state}
           startedAt={server.startedAt}

@@ -6,7 +6,7 @@ type ServerIconProps = Omit<ImageProps, 'src' | 'alt'> & {
 };
 
 export const ServerIcon = ({ isActive = false, ...props }: ServerIconProps) => (
-  <Image asChild {...props}>
+  <Image asChild objectFit="contain" {...props}>
     <NextImage
       src={isActive ? '/icons/server_active.png' : '/icons/server_inactive.png'}
       alt={isActive ? 'active server' : 'inactive server'}

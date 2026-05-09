@@ -3,7 +3,7 @@ import { ServerList } from './_components/ServerList';
 
 export default function ServersPage() {
   return (
-    <Container mt={24} p={0} maxW="container.lg">
+    <Container mt={24} p={0} maxW="5xl">
       <ServerList />
     </Container>
   );

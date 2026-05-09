@@ -2,8 +2,8 @@ import { Center, Flex, Icon } from '@chakra-ui/react';
 import { AccountMenu } from './AccountMenu';
 
 const LogoFull = () => (
-  <Icon asChild w="auto" h={8} aria-label="MC Server Manager">
-    <svg width="172" height="34" viewBox="0 0 172 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <Icon asChild w="auto" h="2.125rem" aria-label="MC Server Manager">
+    <svg viewBox="0 0 172 34" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M12.4597 0H8.30645V2.16034H4.15322V0H0V15.1224H4.15322V6.48101H8.30645V15.1224H12.4597V0Z" fill="#EDF2F7"/>
       <path d="M22.8468 4.32068H27V2.16034H24.9234V0H16.6169V2.16034H14.5403V12.962H16.6169V15.1224H24.9234V12.962H27V10.8017H22.8468V12.962H18.6936V2.16034H22.8468V4.32068Z" fill="#EDF2F7"/>
       <path d="M4.15322 19.038H12.4597V16.8776H2.07661V19.038H0V21.1983H2.07661V23.3587H8.30645V29.8397H4.15322V27.6793H0V29.8397H2.07661V32H10.3831V29.8397H12.4597V23.3587H10.3831V21.1983H4.15322V19.038Z" fill="#EDF2F7"/>
