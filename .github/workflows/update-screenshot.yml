@@ -41,7 +41,7 @@ jobs:
       - name: Update Screenshot
         uses: otaly/readme-screenshot-action@v1.0.0
         with:
-          urls: http://localhost:5173/app/servers
+          urls: http://localhost:3000/servers
           server_command: npm run dev
           width: 1280
           height: 832
