@@ -7,6 +7,8 @@
 mise trust
 
 mise install
+
+mise run setup  # git hooks（lefthook）をインストール
 ```
 
 ## Figma デザイン

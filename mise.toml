@@ -1,2 +1,7 @@
 [tools]
 pnpm = "11.0.9"
+lefthook = "2.1.6"
+
+[tasks.setup]
+description = "開発環境のセットアップ（lefthook インストール）"
+run = "lefthook install"

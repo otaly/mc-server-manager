@@ -10,7 +10,6 @@
     "lint": "biome lint .",
     "format": "biome format --write .",
     "check": "biome check --write .",
-    "postinstall": "lefthook install",
     "test": "vitest",
     "test:run": "vitest run",
     "typecheck": "next typegen && tsc --noEmit"
@@ -35,7 +34,6 @@
     "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^6.0.1",
     "jsdom": "^29.1.1",
-    "lefthook": "^2.1.6",
     "typescript": "^5",
     "vitest": "^4.1.5"
   }
