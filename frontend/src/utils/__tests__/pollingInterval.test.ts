@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { getServerPollingInterval } from '../pollingInterval';
 import type { Server } from '@/types/server';
+import { getServerPollingInterval } from '../pollingInterval';
 
 const baseServer: Server = {
   id: '1',

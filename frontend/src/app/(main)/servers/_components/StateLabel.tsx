@@ -1,8 +1,8 @@
 'use client';
 
 import { Span, Text } from '@chakra-ui/react';
-import { formatElapsedTime } from '@/utils/format';
 import type { ServerState } from '@/types/server';
+import { formatElapsedTime } from '@/utils/format';
 
 type StateLabelProps = {
   serverState?: ServerState;
@@ -26,11 +26,7 @@ export const StateLabel = ({
       content = (
         <>
           <Span>RUNNING</Span>
-          {elapsed && (
-            <Span ml={1.5}>
-              {elapsed} ago
-            </Span>
-          )}
+          {elapsed && <Span ml={1.5}>{elapsed} ago</Span>}
         </>
       );
       break;
@@ -43,11 +39,7 @@ export const StateLabel = ({
       content = (
         <>
           <Span>STOPPED</Span>
-          {elapsed && (
-            <Span ml={1.5}>
-              {elapsed} ago
-            </Span>
-          )}
+          {elapsed && <Span ml={1.5}>{elapsed} ago</Span>}
         </>
       );
       break;

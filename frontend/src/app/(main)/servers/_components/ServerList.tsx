@@ -1,7 +1,7 @@
 'use client';
 
-import { useQuery } from '@tanstack/react-query';
 import { List, Spinner, Text } from '@chakra-ui/react';
+import { useQuery } from '@tanstack/react-query';
 import { getServerPollingInterval } from '@/utils/pollingInterval';
 import { fetchServers } from './mockServers';
 import { ServerListItem } from './ServerListItem';
