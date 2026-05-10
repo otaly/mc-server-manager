@@ -6,9 +6,10 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
-    "format": "npm run prettier -- --write",
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "check": "biome check --write .",
+    "postinstall": "lefthook install",
     "test": "vitest",
     "test:run": "vitest run",
     "typecheck": "next typegen && tsc --noEmit"
