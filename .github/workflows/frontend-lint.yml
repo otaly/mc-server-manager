@@ -1,14 +1,21 @@
-name: Lint
+name: Frontend Lint
 
 on:
   push:
     branches: [main]
+    paths:
+      - 'frontend/**'
   pull_request:
+    paths:
+      - 'frontend/**'
 
 jobs:
   biome:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
     steps:
       - uses: actions/checkout@v4
       - uses: biomejs/setup-biome@v2
-      - run: biome ci frontend
+      - run: biome ci .
