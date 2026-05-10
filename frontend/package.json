@@ -2,6 +2,7 @@
   "name": "mc-server-manager",
   "private": true,
   "version": "0.0.0",
+  "packageManager": "pnpm@11.0.9",
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",

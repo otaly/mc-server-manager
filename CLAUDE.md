@@ -61,9 +61,9 @@ frontend/
 
 ```bash
 cd frontend
-npm run dev       # 開発サーバー起動
-npm run build     # ビルド
-npm run test      # テスト（watch モード）
-npm run test:run  # テスト（1 回実行）
-npm run typecheck # 型チェック
+pnpm dev          # 開発サーバー起動
+pnpm build        # ビルド
+pnpm test         # テスト（watch モード）
+pnpm test:run     # テスト（1 回実行）
+pnpm typecheck    # 型チェック
 ```
